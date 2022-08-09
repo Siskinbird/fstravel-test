@@ -8,7 +8,16 @@
     <div class="other-links">
       <span v-for="link in otherLinks" :key="link">{{link}}</span>
     </div>
-    <div class="person">Hello</div>
+    <div class="person">
+      <div class="person__body">
+        <img src="../assets/photo.jpg" alt="User">
+        <div class="user">
+          <p class="user-name">Екатерина Ивановна</p>
+          <div class="user-button">2 458</div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </template>
 
@@ -97,9 +106,34 @@ export default {
       }
     }
     .person {
+      padding: 5px;
       flex: 0 0 auto;
       border-top: 2px solid rgb(221, 218, 218);
       max-width: 100%;
-      height: 40px;
+      height: auto; 
+      img {
+        margin: 10px 15px;
+        border-radius: 8px;
+      }
+    }
+    .person__body {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 800;
+      .user-button {
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 800;
+        margin-top: 12px;
+        border-radius: 6px;
+        max-width: 35%;
+        background-color: rgb(251, 198, 8);
+        padding: 2px 0 2px 4px;
+      }
+      p {
+        margin: 0;
+      }
     }
 </style>
