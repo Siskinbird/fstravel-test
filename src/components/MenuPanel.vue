@@ -1,8 +1,10 @@
 <template>
     <div class="menu">
-        <div :class="open ? 'menu__panel open' : 'menu__panel'" @click="$emit('toggleOpen', index)">
-            <div class="title">{{menu__panel.title}}</div>
-            <div class="links">{{menu__panel.link}}</div>
+        <div :class="isOpen? 'menu__panel open' : 'menu__panel'" @click="isOpen = !isOpen">
+            <div class="title">{{links.title}}</div>
+            <div class="links" v-for="link in links" :key="link.value">
+                <span v-if="typeof link === 'object'">{{link.value}}</span>
+            </div>
         </div>
     </div>    
 </template>
@@ -10,7 +12,17 @@
 <script>
 export default {
     name: 'MenuPanel',
-    props: ['menu__panel', 'index', 'open'],
+    props: {
+        links: {
+            type: Object,
+            required: true
+        },        
+    },
+    data() {
+        return {
+            isOpen: false
+        }
+    }
 }
 </script>
 
