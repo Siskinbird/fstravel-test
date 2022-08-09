@@ -56,6 +56,8 @@ export default {
         }
     }
     .menu__panel {
+        margin-left: 20px;
+        margin-right: 20px;
         .links {
             font-size: 18px;
             opacity: 0;

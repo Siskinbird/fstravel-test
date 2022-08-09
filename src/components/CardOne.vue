@@ -46,6 +46,12 @@ export default {
         border: 1px solid rgb(227, 221, 221);
         border-radius: 12px;
         box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: ease-in-out all .4s;
+        &:hover {
+          margin-top: 10px;
+          box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
+        }
     }
     .card__body {
         padding: 15px;

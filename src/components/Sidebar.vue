@@ -8,6 +8,7 @@
     <div class="other-links">
       <span v-for="link in otherLinks" :key="link">{{link}}</span>
     </div>
+    <div class="person">Hello</div>
   </div>
 </template>
 
@@ -65,27 +66,40 @@ export default {
 
 <style scoped lang="scss">
     .sidebar {
+      display: flex;
+      flex-direction: column;
+
       max-width: 385px;
       height: auto;
       margin-right: 10px;
       //border: 2px solid black;
       border-radius: 6px;
-      padding: 30px;
+      //padding: 30px;
       background-color: rgb(248, 246, 246);
     }
     .sidebar__logo img{
-      width: 500px;
+      flex: 0 0 auto;
+      margin: 20px;
+      width: 300px;
       height: auto;
       position: relative;
       top:0px;
       left: 0px;
     }
     .other-links {
+      flex: 1 0 auto;
       margin-top: 30px;
       font-weight: 800;
       span {
+        margin-left: 20px;
         padding: 2px;
         display: block;
       }
+    }
+    .person {
+      flex: 0 0 auto;
+      border-top: 2px solid rgb(221, 218, 218);
+      max-width: 100%;
+      height: 40px;
     }
 </style>
