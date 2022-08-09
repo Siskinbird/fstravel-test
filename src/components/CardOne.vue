@@ -1,12 +1,21 @@
 <template>
   <div class="cards">
-    <div class="card" v-for="seminar in data.seminars" :key="seminar.id">
+    <div class="card" v-for="item in data" :key="item.id">
         <div class="card__body" >
-            <div class="card__title">{{seminar.title}}</div>
-            <div class="card__type">{{seminar.type}}</div>
-            <div class="card__duration">{{seminar.duration}}</div>
-            <div class="card__start">{{seminar.dateStart}}</div>
-            <div class="card__description">{{seminar.description}}</div>
+            <div class="card__title"><p>{{item.title}}</p></div>
+            <div class="card__type">
+              <img src="../assets/icon-traning.svg" alt="Sminar-icon">
+              <p>{{item.type}}</p>
+            </div>
+            <div class="card__duration">
+              <img  v-if="item.duration" src="../assets/icon-time.svg" alt="Sminar-icon">
+              <p>{{item.duration}}</p>
+            </div>
+            <div class="card__start">
+              <img  v-if="item.dateStart" src="../assets/icon-calendar.svg" alt="Sminar-icon">
+              <p>{{item.dateStart}}</p>
+              </div>
+            <div class="card__description">{{item.description}}</div>
         </div>
     </div> 
   </div>
@@ -14,14 +23,10 @@
 
 <script>
 
-import jsonData from '../assets/jsonData.json'
-
 export default {
   name: 'CardOne',
-  data() {
-    return {
-        data: jsonData
-    }
+  props: {
+    data: Array
   }
 }
 </script>
@@ -58,10 +63,44 @@ export default {
 
     }
     .card__title {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 800;
         p {
+            margin: 0;
             color: black;
         }
+    }
+    .card__type {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      p {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: 6px;
+      }
+    }
+    .card__duration {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      p {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: 6px;
+      }
+    }
+    .card__start {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      p {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: 6px;
+      }
     }
 </style>
