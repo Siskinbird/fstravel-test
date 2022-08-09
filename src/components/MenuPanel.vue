@@ -15,7 +15,7 @@ export default {
     props: {
         links: {
             type: Object,
-            required: true
+            required: true,
         },        
     },
     data() {
@@ -57,7 +57,7 @@ export default {
     }
     .menu__panel {
         .links {
-            font-size: 24px;
+            font-size: 18px;
             opacity: 0;
             max-height: 0px;
             overflow-y: hidden;
@@ -75,6 +75,8 @@ export default {
     .menu__panel.open .links {
         opacity: 1;
         max-height: 1000px;
+        margin-left: 20px;
+        cursor: pointer;
     }
 
 </style>

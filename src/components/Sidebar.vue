@@ -37,7 +37,7 @@ export default {
           href: "#"
         },
       },
-      learnLink: {
+      learningLinks: {
         title: "Обучение",
         link1: {
           value: "Семинары и курсы",
@@ -58,17 +58,7 @@ export default {
       },
       otherLinks: ["Чат", "Конкурсы", "Онлайн преподавание", "Маркет", "Правила", "Представители"]
     }
-  }/* ,
-  methods: {
-    toggleOpen: function(index) {
-      this.links = this.links.map((menu__panel, i) => {
-        if(index === i) {
-          menu__panel.open = !menu__panel.open;
-        }
-        return menu__panel;
-      })
-    }
-  }, */
+  }
 }
 </script>
 
@@ -90,40 +80,12 @@ export default {
       top:0px;
       left: 0px;
     }
-/*     a {
-      text-decoration: none;
-      font-size: 32px;
-      color: black;
-      margin-top: 20px;
-    }
-    ul {
-      padding: 0;
-      list-style: none;
-      font-weight: 600;
-    }
-    li {
-      margin-top: 20px;
-    }
-    .menu a {
-      border-radius: 16px;
-      transition: ease all .5s;
-      padding: 10px;
-       &:hover {
-        padding: 10px 0 10px 20px;
+    .other-links {
+      margin-top: 30px;
+      font-weight: 800;
+      span {
+        padding: 2px;
+        display: block;
       }
     }
-    .menu__list {
-      position: relative;
-      &:hover {
-        .menu__drop {
-          opacity: 1;
-        }
-      }
-    }
-    .menu__drop {
-      position: absolute;
-      left: 50%;
-      opacity: 0;
-    }
-     */
 </style>

@@ -40,7 +40,6 @@ export default {
     .author {
       max-width: 98%;
       height: auto;
-      border: 4px solid blue;
       margin: 0 auto;
       text-align: left;
     }
