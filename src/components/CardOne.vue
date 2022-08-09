@@ -23,7 +23,7 @@
             <div class="card__methodists" v-if="item.methodists">
               <p v-for="methodist in item.methodists" :key="methodist">Методист: {{methodist}}</p>
             </div>
-            <div class="card__price" v-if="item.price">{{item.price}}</div>
+            <div class="card__price" v-if="item.price"><p>{{item.price}} P</p></div>
         </div>
     </div> 
   </div>
@@ -60,6 +60,7 @@ export default {
       height: auto;
     }
     .card {
+        position: relative;
         margin-top: 20px;
         margin-left: 30px;
         margin-bottom: 20px;
@@ -126,6 +127,25 @@ export default {
     }
 
     .card__price {
+      position: absolute;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 30px;
+      right: 30px;
+      background-color: rgb(251, 198, 8);
+      border-radius: 8px;
+      width: 100px;
+      transition: all ease-in-out .4s;
+      p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+        margin: 10px auto;
+      }
+      &:hover{
+        box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
+        bottom: 20px;
+      }
     }
 </style>
