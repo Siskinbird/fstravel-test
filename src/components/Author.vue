@@ -9,13 +9,13 @@
         </div>
     </div>
     <div class="about">
-        <div class="description" v-for="item in data" :key="item.id">
-            <h3>{{item.topic}}</h3>
-            <h2>{{item.name}}</h2>
-            <p>{{item.description}}</p>
+        <div class="description">
+            <h3>{{data.author.topic}}</h3>
+            <h2>{{data.author.name}}</h2>
+            <p>{{data.author.description}}</p>
         </div>
-        <div class="avatar" v-for="item in data" :key="item.id">
-            <img :src="item.avatar">
+        <div class="avatar">
+            <img :src="data.author.avatar">
         </div>
     </div>
    </div>
