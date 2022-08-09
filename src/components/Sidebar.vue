@@ -77,13 +77,10 @@ export default {
     .sidebar {
       display: flex;
       flex-direction: column;
-
       max-width: 385px;
       height: auto;
       margin-right: 10px;
-      //border: 2px solid black;
       border-radius: 6px;
-      //padding: 30px;
       background-color: rgb(248, 246, 246);
     }
     .sidebar__logo img{

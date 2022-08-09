@@ -13,8 +13,8 @@
               <p>{{item.duration}}</p>
             </div>
             <div class="card__start">
-              <img  v-if="item.dateStart" src="../assets/icon-calendar.svg" alt="Sminar-icon">
-              <p>{{item.dateStart}}</p>
+              <img src="../assets/icon-calendar.svg" alt="Sminar-icon">
+              <p>Сессия: {{dataTime(item.dateStart)}}</p>
               </div>
             <div class="card__description">{{item.description}}</div>
             <div class="card__curators" v-if="item.curators">
@@ -23,6 +23,7 @@
             <div class="card__methodists" v-if="item.methodists">
               <p v-for="methodist in item.methodists" :key="methodist">Методист: {{methodist}}</p>
             </div>
+            <div class="card__price" v-if="item.price">{{item.price}}</div>
         </div>
     </div> 
   </div>
@@ -30,11 +31,20 @@
 
 <script>
 
+import moment from 'moment';
+
 export default {
   name: 'CardOne',
+  methods: {
+    dataTime(value) {
+      moment.lang('ru')
+      return moment(value).format('DD MMMM')
+    }
+  },
   props: {
     data: Array
-  }
+  },
+
 }
 </script>
 
@@ -53,7 +63,7 @@ export default {
         margin-top: 20px;
         margin-left: 30px;
         margin-bottom: 20px;
-        width: 200px;
+        width: 240px;
         height: 400px;
         border: 1px solid rgb(227, 221, 221);
         border-radius: 12px;
@@ -113,5 +123,9 @@ export default {
         margin-bottom: 4px;
         margin-left: 6px;
       }
+    }
+
+    .card__price {
+      display: flex;
     }
 </style>

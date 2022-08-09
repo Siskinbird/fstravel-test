@@ -33,7 +33,7 @@ export default {
 
     
     .menu__panel {
-        font-size: 24px;    
+        font-size: 16px;    
         .title{
             cursor: pointer;
             font-weight: 800;
@@ -45,8 +45,8 @@ export default {
                 top: 50%;
                 right: 0;
                 transform: translateY(-50%) rotate(90deg);
-                width: 30px;
-                height: 30px;
+                width: 16px;
+                height: 16px;
                 background-image: url('../assets/arrow-next.svg');
                 background-position: center;
                 background-size: contain;
