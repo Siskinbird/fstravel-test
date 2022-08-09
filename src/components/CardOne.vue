@@ -4,7 +4,8 @@
         <div class="card__body" >
             <div class="card__title"><p>{{item.title}}</p></div>
             <div class="card__type">
-              <img src="../assets/icon-traning.svg" alt="Sminar-icon">
+              <img v-if="item.type === 'seminar'" src="../assets/icon-traning.svg" alt="Sminar-icon">
+              <img v-if="item.type === 'training'" src="../assets/icon-seminar.svg" alt="Sminar-icon">
               <p>{{item.type}}</p>
             </div>
             <div class="card__duration">
@@ -16,6 +17,12 @@
               <p>{{item.dateStart}}</p>
               </div>
             <div class="card__description">{{item.description}}</div>
+            <div class="card__curators" v-if="item.curators">
+              <p v-for="curator in item.curators" :key="curator">Куратор: {{curator}}</p>
+            </div>
+            <div class="card__methodists" v-if="item.methodists">
+              <p v-for="methodist in item.methodists" :key="methodist">Методист: {{methodist}}</p>
+            </div>
         </div>
     </div> 
   </div>
@@ -79,6 +86,10 @@ export default {
         margin-top: 4px;
         margin-bottom: 4px;
         margin-left: 6px;
+      }
+      img {
+        width: 12px;
+        height: 12.7px;
       }
     }
     .card__duration {

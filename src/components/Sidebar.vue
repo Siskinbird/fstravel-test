@@ -96,6 +96,7 @@ export default {
       left: 0px;
     }
     .other-links {
+      cursor: pointer;
       flex: 1 0 auto;
       margin-top: 30px;
       font-weight: 800;
