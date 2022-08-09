@@ -15,7 +15,7 @@
             <p>{{data.author.description}}</p>
         </div>
         <div class="avatar">
-            <img :src="data.author.avatar">
+            <img :src="data.author.avatar" alt="Author avatar">
         </div>
     </div>
    </div>

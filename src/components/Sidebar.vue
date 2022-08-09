@@ -3,11 +3,11 @@
     <div class="sidebar__logo">
       <img src="../assets/logo.svg" alt="">
     </div>
-    <MenuPanel v-for="(menu__panel, i) in links" :menu__panel="menu__panel" 
-    :index="i" 
-    :key="i"
-    :open="menu__panel.open"
-    @toggleOpen = "toggleOpen" />
+    <MenuPanel :links="profileLinks" />
+    <MenuPanel :links="learningLinks" />
+    <div class="other-links">
+      <span v-for="link in otherLinks" :key="link">{{link}}</span>
+    </div>
   </div>
 </template>
 
@@ -22,20 +22,43 @@ export default {
   },
   data() {
     return {
-      links: [
-        {
-          title: "Мой кабинет",
-          link: ["first", "second", "third"],
-          open: false
-          },
-          {
-          title: "Обучение",
-          link: ["Семинары и курсы", "Вебинары", "Самообучение", "Тьютор"],
-          open: false
+      profileLinks: {
+        title: "Мой кабинет",
+        linlk1: {
+          value: "Test link 1",
+          href: "#"
+        },
+        link2: {
+          value: "Test link 2",
+          href: "#"
+        },
+        link3: {
+          value: "Test link 3",
+          href: "#"
+        },
+      },
+      learnLink: {
+        title: "Обучение",
+        link1: {
+          value: "Семинары и курсы",
+          href: "#"
+        },
+        link2: {
+          value: "Вебинары",
+          href: "#"
+        },
+        link3: {
+          value: "Самообучение",
+          href: "#"
+        },
+        link4: {
+          value: "Тьютор",
+          href: "#"
         }
-      ]
+      },
+      otherLinks: ["Чат", "Конкурсы", "Онлайн преподавание", "Маркет", "Правила", "Представители"]
     }
-  },
+  }/* ,
   methods: {
     toggleOpen: function(index) {
       this.links = this.links.map((menu__panel, i) => {
@@ -45,7 +68,7 @@ export default {
         return menu__panel;
       })
     }
-  },
+  }, */
 }
 </script>
 
