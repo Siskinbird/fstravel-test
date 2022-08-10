@@ -59,9 +59,14 @@ export default {
       justify-content: flex-start;
       max-width: 100%;
       height: auto;
+      @media(max-width: 1166px) {
+        font-size: 12px;
+        justify-content: space-around;
+       }
        @media(max-width:768px) {
         font-size: 12px;
        }
+       
     }
     .card {
         position: relative;
@@ -80,7 +85,7 @@ export default {
           box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
         }
         @media(max-width:768px) {
-          width: 200px;
+          width: 220px;
         }
         @media(max-width:479px) {
           width: 280px;

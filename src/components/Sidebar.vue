@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar__plansh">
+  <div class="sidebar__mobile">
     <div class="sidebar__logo">
       <img src="../assets/logo.svg" alt="logo">
     </div>
@@ -152,7 +152,7 @@ export default {
         margin: 0;
       }
     }
-    .sidebar__plansh {
+    .sidebar__mobile {
       display: none;
       @media(max-width:768px) {
         max-width: 100%;
