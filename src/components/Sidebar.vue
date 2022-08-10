@@ -134,9 +134,6 @@ export default {
       margin-right: 10px;
       border-radius: 6px;
       background-color: rgb(248, 246, 246);
-      //@media(max-width: 768px) {
-      //  display: none;
-      //}
     }
     .sidebar__logo img{
       -webkit-box-flex: 0;

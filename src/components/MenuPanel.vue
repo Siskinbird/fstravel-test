@@ -6,15 +6,7 @@
                 <span v-if="typeof link === 'object'">{{link.value}}</span>
             </div>
         </div>
-    </div> 
-    <!-- <div class="menu__mobile" >
-        <div :class="isOpen? 'menu__panel open' : 'menu__panel'" @click="isOpen = !isOpen">
-            <div class="title">{{links.title}}</div>
-            <div class="links" v-for="link in links" :key="link.value">
-                <span v-if="typeof link === 'object'">{{link.value}}</span>
-            </div>
-        </div>
-    </div> -->   
+    </div>    
 </template>
 
 <script>
