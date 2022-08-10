@@ -1,8 +1,4 @@
 <template>
-  
-
-
-
   <div class="sidebar" v-show="!mobile">
     <div class="sidebar__logo">
       <img src="../assets/logo.svg" alt="logo">
@@ -289,17 +285,13 @@ export default {
         height: auto;
         padding-bottom: 15px;
         background-color: rgb(248, 246, 246);
-        top: 90px;
-        left: 233px;
+        top: 10%;
+        right: 10%;
         z-index: 1000;
-        @media(max-width: 340px) {
-          top: 60px;
-          left: 30px;
-        }
         .links {
             display: block;
           &:hover {
-            background-color: yellow;
+            background-color: orange;
           }
         }
 }
