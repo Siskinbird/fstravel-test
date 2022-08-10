@@ -105,7 +105,7 @@ export default {
       position: relative;
       top:0px;
       left: 0px;
-      @media(max-width: 330px){
+      @media(max-width: 479px){
         width: 150px;
       }
     }
@@ -158,13 +158,14 @@ export default {
         max-width: 100%;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
       }
     }
 
 .hamburger__btn {
   position: relative;
-  top: 40px;
+  top: 15px;
   width: 64px;
   height: 48px;
   cursor: pointer;
@@ -180,7 +181,7 @@ export default {
 
   border-radius: 6px;
   transition: 0.3s ease-in-out;
-  @media(max-width: 400px){
+  @media(max-width: 479px){
     right: 40px;
     top: 52px;
   }

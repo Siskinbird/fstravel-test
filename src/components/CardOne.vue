@@ -82,8 +82,10 @@ export default {
         @media(max-width:768px) {
           width: 200px;
         }
-        @media(max-width:330px) {
+        @media(max-width:479px) {
           width: 280px;
+          margin: 20px;
+          margin: 20px auto;
         }
     }
     .card__body {

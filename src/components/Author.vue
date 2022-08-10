@@ -64,7 +64,7 @@ export default {
             p {
             font-size: 24px;
         }
-        @media(max-width: 330px){
+        @media(max-width: 479px){
          p{
             font-size: 18px;
          }
@@ -84,7 +84,7 @@ export default {
         @media(max-width:768px) {
             font-size: 14px;
         }
-        @media(max-width: 330px){
+        @media(max-width: 479px){
          p{
             font-size: 12px;
          }
@@ -126,7 +126,7 @@ export default {
               line-height: 20px;  
             }
        }
-       @media(max-width: 330px){
+       @media(max-width: 479px){
         flex-direction: column;
          .avatar {
             order: -1;
