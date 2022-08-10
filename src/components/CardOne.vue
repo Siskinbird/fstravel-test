@@ -24,6 +24,8 @@
               <p v-for="methodist in item.methodists" :key="methodist">Методист: {{methodist}}</p>
             </div>
             <div class="card__price" v-if="item.price"><p>{{item.price}} P</p></div>
+            <div class="card__tarif" v-if="item.type === 'training'"><p>Выбрать тариф</p></div>
+
         </div>
     </div> 
   </div>
@@ -145,7 +147,29 @@ export default {
       }
       &:hover{
         box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
-        bottom: 20px;
+        bottom: 25px;
+      }
+    }
+    .card__tarif {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 30px;
+      right: 20px;
+      background-color: rgb(62, 140, 248);
+      border-radius: 8px;
+      width: 180px;
+      transition: all ease-in-out .4s;
+      p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+        margin: 10px auto;
+      }
+      &:hover{
+        box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
+        bottom: 25px;
       }
     }
 </style>
