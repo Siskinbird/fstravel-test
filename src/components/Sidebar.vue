@@ -1,15 +1,9 @@
 <template>
-  <div class="sidebar__mobile">
-    <div class="sidebar__logo">
-      <img src="../assets/logo.svg" alt="logo">
-    </div>
-    <div class="hamburger__btn" @click="activeBtn =! activeBtn" :class="{'is-active': activeBtn}">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-  </div>
-  <div class="sidebar">
+  
+
+
+
+  <div class="sidebar" v-show="!mobile">
     <div class="sidebar__logo">
       <img src="../assets/logo.svg" alt="logo">
     </div>
@@ -29,6 +23,31 @@
       
     </div>
   </div>
+
+<div class="sidebar__mobile">
+    <div class="sidebar__logo">
+      <img src="../assets/logo.svg" alt="logo">
+    </div>
+
+
+    <div class="hamburger__btn" @click="toggleMobileNav" v-show="mobile" :class="{'is-active' : mobileNav}">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
+
+<transition name="mobile-nav">
+        <div v-show="mobileNav" class="dropdown-nav">
+          <MenuPanel :links="profileLinks" />
+          <MenuPanel :links="learningLinks" />
+            <div class="other-links">
+              <span v-for="link in otherLinks" :key="link">{{link}}</span>
+            </div>
+          </div>
+</transition>
+
+
 </template>
 
 <script>
@@ -42,7 +61,9 @@ export default {
   },
   data() {
     return {
-      activeBtn: false,
+      windowWidth: null,
+      mobileNav: false,
+      mobile: false,
       profileLinks: {
         title: "Мой кабинет",
         linlk1: {
@@ -79,7 +100,26 @@ export default {
       },
       otherLinks: ["Чат", "Конкурсы", "Онлайн преподавание", "Маркет", "Правила", "Представители"]
     }
-  }
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
+  },
+  methods: {
+    toggleMobileNav() {
+      this.mobileNav = !this.mobileNav; 
+    },
+    checkScreen() {
+      this.windowWidth = window.innerWidth;
+      if(this.windowWidth <= 768) {
+        this.mobile = true;
+        return;
+      }
+      this.mobile = false;
+      this.mobileNav = false;
+      return;
+    } 
+  },
 }
 </script>
 
@@ -98,9 +138,9 @@ export default {
       margin-right: 10px;
       border-radius: 6px;
       background-color: rgb(248, 246, 246);
-      @media(max-width: 768px) {
-        display: none;
-      }
+      //@media(max-width: 768px) {
+      //  display: none;
+      //}
     }
     .sidebar__logo img{
       -webkit-box-flex: 0;
@@ -238,4 +278,30 @@ export default {
       -ms-transform: rotate(45deg) translateY(-8px);
           transform: rotate(45deg) translateY(-8px);
 }
+
+.dropdown-nav {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        padding-bottom: 15px;
+        background-color: rgb(248, 246, 246);
+        top: 90px;
+        left: 233px;
+        z-index: 1000;
+        @media(max-width: 340px) {
+          top: 60px;
+          left: 30px;
+        }
+        .links {
+            display: block;
+          &:hover {
+            background-color: yellow;
+          }
+        }
+}
+
 </style>

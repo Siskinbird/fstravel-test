@@ -81,6 +81,9 @@ export default {
             -webkit-transition: all .4s ease-out;
             -o-transition: all .4s ease-out;
             transition: all .4s ease-out;
+            &:hover {
+                background-color: yellow;
+            }
         }
     }
     .menu__panel.open  {
