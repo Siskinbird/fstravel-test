@@ -36,6 +36,7 @@ export default {
     .menu__panel {
         font-size: 16px;    
         .title{
+            margin-left: 20px;
             cursor: pointer;
             font-weight: 800;
             position: relative;
@@ -43,10 +44,11 @@ export default {
             -o-transition: all .4s linear;
             transition: all .4s linear;
             &::after {
+                
                 content: '';
                 position: absolute;
                 top: 50%;
-                right: 0;
+                right: 20px;
                 -webkit-transform: translateY(-50%) rotate(90deg);
                     -ms-transform: translateY(-50%) rotate(90deg);
                         transform: translateY(-50%) rotate(90deg);
@@ -62,22 +64,19 @@ export default {
             }
         }
     }
-    .menu__panel {
-        margin-left: 20px;
-        margin-right: 20px;
-        .links {
-            font-size: 18px;
-            opacity: 0;
-            max-height: 0px;
-            overflow-y: hidden;
-            -webkit-transition: all .4s ease-out;
-            -o-transition: all .4s ease-out;
-            transition: all .4s ease-out;
-            &:hover {
-                background-color: yellow;
-            }
-        }
-    }
+    .links {
+           font-size: 18px;
+           opacity: 0;
+           max-height: 0px;
+           overflow-y: hidden;
+           -webkit-transition: all .4s ease-out;
+           -o-transition: all .4s ease-out;
+           transition: all .4s ease-out;
+           &:hover {
+               background-color: yellow;
+          }
+      }
+
     .menu__panel.open  {
         .title {
         margin-bottom: 15px;
@@ -91,9 +90,9 @@ export default {
     .menu__panel.open .links {
         opacity: 1;
         max-height: 1000px;
-        margin-left: 20px;
+        padding-left: 40px;
         cursor: pointer;
-    }
+}
     .menu__mobile {
         -webkit-transition: t;
         -o-transition: t;

@@ -224,9 +224,9 @@ export default {
 
 .hamburger__btn {
   position: relative;
-  top: 15px;
-  width: 64px;
-  height: 48px;
+  right: 5.3%;
+  width: 24px;
+  height: 12px;
   cursor: pointer;
   z-index: 999;
 }
@@ -241,10 +241,10 @@ export default {
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  @media(max-width: 479px){
+/*   @media(max-width: 479px){
     right: 40px;
     top: 52px;
-  }
+  } */
 }
 .hamburger__btn span:nth-child(1) {
   top: 0;
@@ -282,15 +282,13 @@ export default {
         height: auto;
         padding-bottom: 15px;
         background-color: rgb(248, 246, 246);
-        top: 10%;
-        right: 10%;
+        top: 12%;
+        right: 8%;
         z-index: 1000;
-        .links {
-            display: block;
-          &:hover {
-            background-color: orange;
-          }
-        }
-}
+       @media(max-width: 480px) {
+        top: 8%;
+        right: 8%;
+       }
+  }
 
 </style>
