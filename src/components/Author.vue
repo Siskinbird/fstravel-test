@@ -44,30 +44,39 @@ export default {
       text-align: left;
     }
     .top__title {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
     .top__title-left {
-        margin: 0;
-        padding: 5px;
+      margin: 0;
+      padding: 5px;
+      p {
+        margin: 10px;
+        font-size: 42px;
+        font-weight: 700;
+      }
+      span {
+        color: rgb(180, 176, 176);
+      }
+      @media(max-width:768px) {
         p {
-            margin: 10px;
-            font-size: 42px;
-            font-weight: 700;
+        font-size: 24px;
+      }
+      @media(max-width: 479px){
+        p {
+          font-size: 18px;
         }
-        span {
-            color: rgb(180, 176, 176);
-        }
-        @media(max-width:768px) {
-            p {
-            font-size: 24px;
-        }
-        @media(max-width: 479px){
-         p{
-            font-size: 18px;
-         }
       }
         }
     }
@@ -85,16 +94,25 @@ export default {
             font-size: 14px;
         }
         @media(max-width: 479px){
-         p{
-            font-size: 12px;
-         }
-      }
+            p {
+                font-size: 12px;
+            }
+       }
     }
     .about {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         margin: 10px;
         padding: 10px;
         h3 {
@@ -121,15 +139,21 @@ export default {
             font-weight: 400;
         }
         @media(max-width:768px) {
-            p{
+            p {
               font-size: 16px;
               line-height: 20px;  
             }
        }
+       
        @media(max-width: 479px){
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
          .avatar {
-            order: -1;
+            -webkit-box-ordinal-group: 0;
+                -ms-flex-order: -1;
+                    order: -1;
         }
         img {
             width: 120px;

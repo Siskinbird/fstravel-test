@@ -34,12 +34,12 @@
 <script>
 
 import moment from 'moment';
+import 'moment/locale/ru' 
 
 export default {
   name: 'CardOne',
   methods: {
     dataTime(value) {
-      moment.lang('ru')
       return moment(value).format('DD MMMM')
     }
   },
@@ -53,21 +53,29 @@ export default {
 
 <style scoped lang="scss">
     .cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       max-width: 100%;
       height: auto;
       @media(max-width: 1166px) {
         font-size: 12px;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
        }
        @media(max-width:768px) {
         font-size: 12px;
-       }
-       
-    }
+       } 
+     }
     .card {
         position: relative;
         margin-top: 20px;
@@ -77,12 +85,16 @@ export default {
         height: 400px;
         border: 1px solid rgb(227, 221, 221);
         border-radius: 12px;
-        box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
+        -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
+                box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
         cursor: pointer;
+        -webkit-transition: ease-in-out all .4s;
+        -o-transition: ease-in-out all .4s;
         transition: ease-in-out all .4s;
         &:hover {
           margin-top: 10px;
-          box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
+          -webkit-box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
+                  box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
         }
         @media(max-width:768px) {
           width: 220px;
@@ -92,27 +104,35 @@ export default {
           margin: 20px;
           margin: 20px auto;
         }
-    }
+     }
     .card__body {
         padding: 15px;
-
-    }
+     }
     .card__title {
         font-size: 18px;
         font-weight: 800;
         p {
             margin: 0;
             color: black;
-        }
+         }
          @media(max-width:768px) {
           font-size: 16px;
-         }
+        }
     }
     .card__type {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       p {
         margin-top: 4px;
         margin-bottom: 4px;
@@ -124,10 +144,19 @@ export default {
       }
     }
     .card__duration {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       p {
         margin-top: 4px;
         margin-bottom: 4px;
@@ -135,10 +164,19 @@ export default {
       }
     }
     .card__start {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       p {
         margin-top: 4px;
         margin-bottom: 4px;
@@ -148,14 +186,22 @@ export default {
 
     .card__price {
       position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       bottom: 30px;
       right: 30px;
       background-color: rgb(251, 198, 8);
       border-radius: 8px;
       width: 100px;
+      -webkit-transition: all ease-in-out .4s;
+      -o-transition: all ease-in-out .4s;
       transition: all ease-in-out .4s;
       p {
         color: #fff;
@@ -164,20 +210,29 @@ export default {
         margin: 10px auto;
       }
       &:hover{
-        box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
+        -webkit-box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
+                box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
         bottom: 25px;
       }
     }
     .card__tarif {
       position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       bottom: 30px;
       right: 20px;
       background-color: rgb(62, 140, 248);
       border-radius: 8px;
       width: 180px;
+      -webkit-transition: all ease-in-out .4s;
+      -o-transition: all ease-in-out .4s;
       transition: all ease-in-out .4s;
       p {
         color: #fff;
@@ -186,14 +241,15 @@ export default {
         margin: 10px auto;
       }
       &:hover{
-        box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
+        -webkit-box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
+                box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
         bottom: 25px;
       }
       @media(max-width:768px) {
-          width: 130px;
-          p {
-            font-size: 14px;
-          }
-       }
+        width: 130px;
+      p {
+      font-size: 14px;
     }
+  }
+}
 </style>

@@ -86,8 +86,13 @@ export default {
 
 <style scoped lang="scss">
     .sidebar {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       max-width: 385px;
       height: auto;
       margin-right: 10px;
@@ -98,7 +103,9 @@ export default {
       }
     }
     .sidebar__logo img{
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
       margin: 20px;
       width: 300px;
       height: auto;
@@ -111,7 +118,9 @@ export default {
     }
     .other-links {
       cursor: pointer;
-      flex: 1 0 auto;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
       margin-top: 30px;
       font-weight: 800;
       span {
@@ -122,7 +131,9 @@ export default {
     }
     .person {
       padding: 5px;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
       border-top: 2px solid rgb(221, 218, 218);
       max-width: 100%;
       height: auto; 
@@ -130,12 +141,18 @@ export default {
         margin: 10px 15px;
         border-radius: 8px;
       }
-      
     }
     .person__body {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       font-size: 14px;
       font-weight: 800;
       .user-button {
@@ -156,10 +173,19 @@ export default {
       display: none;
       @media(max-width:768px) {
         max-width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
       }
     }
 
@@ -178,8 +204,9 @@ export default {
   background-color: #000;
   position: absolute;
   top: 10px;
-
   border-radius: 6px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   @media(max-width: 479px){
     right: 40px;
@@ -199,14 +226,16 @@ export default {
   background-color: #000;
 }
 .hamburger__btn.is-active span:nth-child(1) {
-  transform: rotate(-45deg) translateY(8px);
+  -webkit-transform: rotate(-45deg) translateY(8px);
+      -ms-transform: rotate(-45deg) translateY(8px);
+          transform: rotate(-45deg) translateY(8px);
 }
 .hamburger__btn.is-active span:nth-child(2) {
   opacity: 0;
 }
 .hamburger__btn.is-active span:nth-child(3) {
-  transform: rotate(45deg) translateY(-8px);
+  -webkit-transform: rotate(45deg) translateY(-8px);
+      -ms-transform: rotate(45deg) translateY(-8px);
+          transform: rotate(45deg) translateY(-8px);
 }
-
-
 </style>
