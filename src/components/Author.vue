@@ -64,6 +64,11 @@ export default {
             p {
             font-size: 24px;
         }
+        @media(max-width: 330px){
+         p{
+            font-size: 18px;
+         }
+      }
         }
     }
     .top__title-right {
@@ -79,6 +84,11 @@ export default {
         @media(max-width:768px) {
             font-size: 14px;
         }
+        @media(max-width: 330px){
+         p{
+            font-size: 12px;
+         }
+      }
     }
     .about {
         display: flex;
@@ -115,9 +125,17 @@ export default {
               font-size: 16px;
               line-height: 20px;  
             }
-
-            
-         }
+       }
+       @media(max-width: 330px){
+        flex-direction: column;
+         .avatar {
+            order: -1;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+        }
+      }
         
     }
     .description {

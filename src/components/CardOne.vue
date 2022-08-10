@@ -82,6 +82,9 @@ export default {
         @media(max-width:768px) {
           width: 200px;
         }
+        @media(max-width:330px) {
+          width: 280px;
+        }
     }
     .card__body {
         padding: 15px;

@@ -105,6 +105,9 @@ export default {
       position: relative;
       top:0px;
       left: 0px;
+      @media(max-width: 330px){
+        width: 150px;
+      }
     }
     .other-links {
       cursor: pointer;
@@ -127,6 +130,7 @@ export default {
         margin: 10px 15px;
         border-radius: 8px;
       }
+      
     }
     .person__body {
       display: flex;
@@ -173,11 +177,12 @@ export default {
   background-color: #000;
   position: absolute;
   top: 10px;
-  right: 30px;
+
   border-radius: 6px;
   transition: 0.3s ease-in-out;
   @media(max-width: 400px){
-    right: 0;
+    right: 40px;
+    top: 52px;
   }
 }
 .hamburger__btn span:nth-child(1) {
@@ -193,13 +198,13 @@ export default {
   background-color: #000;
 }
 .hamburger__btn.is-active span:nth-child(1) {
-  transform: rotate(-45deg) translateY(14px);
+  transform: rotate(-45deg) translateY(8px);
 }
 .hamburger__btn.is-active span:nth-child(2) {
   opacity: 0;
 }
 .hamburger__btn.is-active span:nth-child(3) {
-  transform: rotate(45deg) translateY(-14px);
+  transform: rotate(45deg) translateY(-8px);
 }
 
 
