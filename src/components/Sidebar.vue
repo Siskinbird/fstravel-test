@@ -1,7 +1,17 @@
 <template>
+  <div class="sidebar__plansh">
+    <div class="sidebar__logo">
+      <img src="../assets/logo.svg" alt="logo">
+    </div>
+    <div class="hamburger__btn" @click="activeBtn =! activeBtn" :class="{'is-active': activeBtn}">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
   <div class="sidebar">
     <div class="sidebar__logo">
-      <img src="../assets/logo.svg" alt="">
+      <img src="../assets/logo.svg" alt="logo">
     </div>
     <MenuPanel :links="profileLinks" />
     <MenuPanel :links="learningLinks" />
@@ -32,6 +42,7 @@ export default {
   },
   data() {
     return {
+      activeBtn: false,
       profileLinks: {
         title: "Мой кабинет",
         linlk1: {
@@ -82,6 +93,9 @@ export default {
       margin-right: 10px;
       border-radius: 6px;
       background-color: rgb(248, 246, 246);
+      @media(max-width: 768px) {
+        display: none;
+      }
     }
     .sidebar__logo img{
       flex: 0 0 auto;
@@ -134,4 +148,59 @@ export default {
         margin: 0;
       }
     }
+    .sidebar__plansh {
+      display: none;
+      @media(max-width:768px) {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+.hamburger__btn {
+  position: relative;
+  top: 40px;
+  width: 64px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger__btn span {
+  width: 24px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  @media(max-width: 400px){
+    right: 0;
+  }
+}
+.hamburger__btn span:nth-child(1) {
+  top: 0;
+}
+.hamburger__btn span:nth-child(2) {
+  top: 6px;
+}
+.hamburger__btn span:nth-child(3) {
+  top: 12px;
+}
+.hamburger__btn.is-active span {
+  background-color: #000;
+}
+.hamburger__btn.is-active span:nth-child(1) {
+  transform: rotate(-45deg) translateY(14px);
+}
+.hamburger__btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger__btn.is-active span:nth-child(3) {
+  transform: rotate(45deg) translateY(-14px);
+}
+
+
 </style>

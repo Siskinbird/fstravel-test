@@ -57,9 +57,11 @@ export default {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-top: 20px;
       max-width: 100%;
       height: auto;
+       @media(max-width:768px) {
+        font-size: 12px;
+       }
     }
     .card {
         position: relative;
@@ -77,6 +79,9 @@ export default {
           margin-top: 10px;
           box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
         }
+        @media(max-width:768px) {
+          width: 200px;
+        }
     }
     .card__body {
         padding: 15px;
@@ -89,6 +94,9 @@ export default {
             margin: 0;
             color: black;
         }
+         @media(max-width:768px) {
+          font-size: 16px;
+         }
     }
     .card__type {
       display: flex;
@@ -171,5 +179,11 @@ export default {
         box-shadow: 5px 0 5px 2px rgba(0,0,0,0.2);
         bottom: 25px;
       }
+      @media(max-width:768px) {
+          width: 130px;
+          p {
+            font-size: 14px;
+          }
+       }
     }
 </style>

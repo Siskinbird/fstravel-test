@@ -60,15 +60,24 @@ export default {
         span {
             color: rgb(180, 176, 176);
         }
+        @media(max-width:768px) {
+            p {
+            font-size: 24px;
+        }
+        }
     }
     .top__title-right {
         color: rgb(115, 115, 235);
         font-size: 20px;
         font-weight: 600;
-        padding-right: 100px;
+        margin-left: auto;
+        padding-right: 20px;
         p {
             cursor: pointer;
             font-weight: 800;
+        }
+        @media(max-width:768px) {
+            font-size: 14px;
         }
     }
     .about {
@@ -101,8 +110,20 @@ export default {
             font-size: 20px;
             font-weight: 400;
         }
+        @media(max-width:768px) {
+            p{
+              font-size: 16px;
+              line-height: 20px;  
+            }
+
+            
+         }
+        
     }
     .description {
         max-width: 660px;
+        @media(max-width:768px) {
+            max-width: 440px;
+        }
     }
 </style>

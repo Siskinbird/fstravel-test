@@ -9,18 +9,12 @@
 <script>
 import Sidebar from './components/Sidebar.vue'
 import Content from './components/Content.vue'
-//import Author from './components/Author.vue'
-//import CardOne from './components/CardOne.vue'
-//import CardTwo from './components/CardTwo.vue'
 
 export default {
   name: 'App',
   components: {
     Sidebar,
     Content
-    //Author,
-    //CardOne,
-    //CardTwo
   }
 }
 </script>
@@ -34,7 +28,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
 .container {
   max-width: 1440px;
@@ -46,5 +39,9 @@ export default {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+  @media(max-width:768px) {
+    flex-direction: column;
+  }
 }
+
 </style>
