@@ -33,7 +33,7 @@
       </div>
   </div>
 
-<transition name="mobile-nav">
+<transition name="slide-fade">
         <div v-show="mobileNav" class="dropdown-nav">
           <MenuPanel :links="profileLinks" />
           <MenuPanel :links="learningLinks" />
@@ -290,5 +290,18 @@ export default {
         right: 8%;
        }
   }
+  .slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 
 </style>
