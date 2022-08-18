@@ -65,7 +65,7 @@ export default {
           flex-wrap: wrap;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
-              justify-content: flex-start;
+              justify-content: space-evenly;
       max-width: 100%;
       height: auto;
       @media(max-width: 1166px) {

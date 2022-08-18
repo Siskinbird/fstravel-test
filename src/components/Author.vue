@@ -36,17 +36,16 @@ export default {
     .author {
       max-width: 98%;
       height: auto;
-      margin: 0 auto;
+      margin: 20px auto;
       text-align: left;
     }
     .top__title {
+        margin-bottom: 30px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
       -webkit-box-align: center;
           -ms-flex-align: center;
       -webkit-box-pack: justify;
@@ -54,7 +53,6 @@ export default {
               justify-content: space-between;
     }
     .top__title-left {
-      margin: 0;
       p {
         font-size: 42px;
         font-weight: 700;
@@ -77,8 +75,6 @@ export default {
         color: rgb(115, 115, 235);
         font-size: 20px;
         font-weight: 600;
-        margin-left: auto;
-        padding-right: 20px;
         p {
             cursor: pointer;
             font-weight: 800;

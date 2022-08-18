@@ -194,14 +194,13 @@ export default {
     .sidebar__mobile {
       display: none;
       @media(max-width:768px) {
+        padding: 20px;
         max-width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -269,7 +268,7 @@ export default {
         width: 100%;
         max-width: 250px;
         height: auto;
-        padding-bottom: 15px;
+        padding: 15px;
         background-color: rgb(248, 246, 246);
         top: 12%;
         right: 8%;
