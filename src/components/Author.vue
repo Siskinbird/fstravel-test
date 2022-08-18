@@ -8,14 +8,14 @@
             <p>Моё обучение</p>
         </div>
     </div>
-    <div class="about">
+    <div class="about" v-for="author in data" :key="author">
         <div class="description">
-            <h3>{{data.author.topic}}</h3>
-            <h2>{{data.author.name}}</h2>
-            <p>{{data.author.description}}</p>
+            <h3>{{author.topic}}</h3>
+            <h2>{{author.name}}</h2>
+            <p>{{author.description}}</p>
         </div>
         <div class="avatar">
-            <img :src="data.author.avatar" alt="Author avatar">
+            <img :src="author.avatar" alt="author avatar">
         </div>
     </div>
    </div>
@@ -23,14 +23,10 @@
 
 <script>
 
-import jsonData from '../assets/jsonData.json'
-
 export default {
   name: 'Author',
-  data() {
-    return {
-        data: jsonData
-    }
+  props: {
+    data: Array
   }
 }
 </script>
@@ -53,7 +49,7 @@ export default {
               flex-direction: row;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center;
+              align-authors: center;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -109,7 +105,7 @@ export default {
                 flex-direction: row;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center;
+                align-authors: center;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;

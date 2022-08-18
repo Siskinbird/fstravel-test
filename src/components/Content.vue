@@ -1,7 +1,7 @@
 <template>
 
   <div class="content">
-    <Author />
+    <Author :data="author" />
     <CardOne :data="seminars" />
     <CardOne :data="training" />
   </div>
@@ -11,7 +11,6 @@
 
 import Author from '@/components/Author.vue'
 import CardOne from '@/components/CardOne.vue'
-//import data from '@/assets/jsonData.json'
 
 export default {
   name: 'Content',
@@ -24,18 +23,18 @@ export default {
       dataUrl: 'https://eg-cdn.s3.eu-central-1.amazonaws.com/static/fe-test/seminars-test-data.json',
       seminars: [],
       training: [],
+      author: [],
       errors: []
-      //seminars: data.seminars.filter(el => el.type === 'seminar'),
-      //training: data.seminars.filter(el => el.type === 'training')
     }
   },
   async mounted() {
     try {
       const response = await fetch(this.dataUrl)
       const result = await response.json()
-      console.log(result)
       this.seminars.push(...result.seminars.filter(el => el.type === 'seminar'))
       this.training.push(...result.seminars.filter(el => el.type === 'training'))
+      this.author.push(result.author)
+      console.log(this.author)
       console.log(this.seminars)
       console.log(this.training)
     }
