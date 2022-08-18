@@ -36,7 +36,6 @@ export default {
     .menu__panel {
         font-size: 16px;    
         .title{
-            margin-left: 20px;
             cursor: pointer;
             font-weight: 800;
             position: relative;

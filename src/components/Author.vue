@@ -49,16 +49,13 @@ export default {
               flex-direction: row;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-authors: center;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
     }
     .top__title-left {
       margin: 0;
-      padding: 5px;
       p {
-        margin: 10px;
         font-size: 42px;
         font-weight: 700;
       }
@@ -105,12 +102,9 @@ export default {
                 flex-direction: row;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-authors: center;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        margin: 10px;
-        padding: 10px;
         h3 {
             text-transform: uppercase;
             font-weight: 800;

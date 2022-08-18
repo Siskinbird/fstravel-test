@@ -48,7 +48,8 @@ export default {
 
 <style scoped lang="scss">
     .content {
-      max-width: 100%;
+      padding: 20px;
+      max-width: 75%;
       height: auto;
     }
 </style>

@@ -53,6 +53,7 @@ export default {
 
 <style scoped lang="scss">
     .cards {
+      gap: 15px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -78,8 +79,6 @@ export default {
      }
     .card {
         position: relative;
-        margin-top: 20px;
-        margin-left: 30px;
         margin-bottom: 20px;
         width: 240px;
         height: 400px;
@@ -92,7 +91,6 @@ export default {
         -o-transition: ease-in-out all .4s;
         transition: ease-in-out all .4s;
         &:hover {
-          margin-top: 10px;
           -webkit-box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
                   box-shadow: 5px 5px 10px 6px rgba(0,0,0,0.2);
         }

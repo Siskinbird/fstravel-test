@@ -129,22 +129,13 @@ export default {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      max-width: 385px;
+      max-width: 25%;
       height: auto;
-      margin-right: 10px;
+      padding: 20px;
       border-radius: 6px;
       background-color: rgb(248, 246, 246);
     }
     .sidebar__logo img{
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 auto;
-              flex: 0 0 auto;
-      margin: 20px;
-      width: 300px;
-      height: auto;
-      position: relative;
-      top:0px;
-      left: 0px;
       @media(max-width: 479px){
         width: 150px;
       }
@@ -157,8 +148,6 @@ export default {
       margin-top: 30px;
       font-weight: 800;
       span {
-        margin-left: 20px;
-        padding: 2px;
         display: block;
       }
     }
